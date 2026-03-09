@@ -1,9 +1,14 @@
-module.exports = {
+{
     "version": 2,
     "builds": [
         {
             "src": "index.js",
-            "use": "@vercel/node"
+            "use": "@vercel/node",
+            "config": {
+                "includeFiles": [
+                    "dist/**"
+                ]
+            }
         }
     ],
     "routes": [
@@ -12,4 +17,4 @@ module.exports = {
             "dest": "index.js"
         }
     ]
-};
+}
